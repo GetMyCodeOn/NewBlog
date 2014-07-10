@@ -39,8 +39,12 @@ section {
 /* Header */
 .codrops-header {
 	margin: 0 auto;
-	padding: 4em 1em;
+	padding: 0em 0em;
 	text-align: center;
+	height:200px;
+	padding-top: 50px;
+	padding-bottom: 50px;
+
 }
 
 .codrops-header h1 {
