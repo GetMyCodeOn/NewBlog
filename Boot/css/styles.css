@@ -1,5 +1,6 @@
 body {
 	margin-bottom: 150 px;
+  background-color: black;
 }
 
 /*Lists time lines */
@@ -165,4 +166,8 @@ body {
 
 #navbar navbar-default navbar-fixed-bottom {
   margin-top: 20px;
+  position: fixed;
 }
+ #screen-fit {
+   
+ }
