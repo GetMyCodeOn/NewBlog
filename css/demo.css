@@ -209,7 +209,7 @@ a:hover, a:focus {
 	font-size: 3em;
 	font-weight: 300;
 	position: relative;
-	top: 50%;
+	top: 20%;
 	-webkit-transform: translateY(-50%);
 	transform: translateY(-50%);
 }
