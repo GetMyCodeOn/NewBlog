@@ -1,0 +1,144 @@
+@media only screen and (max-width: 400px) {
+  img {display: none; 
+  }
+}
+  
+hr {
+  border-top:dotted 1px #000;
+  margin-right: 10px;
+}
+
+
+
+ol {
+    font-family: "Guardian Egyptian Headline", Georgia, serif;
+}
+label {
+    font-family: "Guardian Egyptian Text", Georgia, serif;
+}
+
+a {
+	font-color: #005689;
+}
+
+body {
+	max-width:40em;
+	font-family:"Guardian Egyptian Text", Georgia, serif;
+}
+
+ a > img  {
+
+position:relative;
+float:left;
+margin-right:10px;
+margin-bottom:50px; 
+
+}
+
+
+h1 {
+
+ font-size: 24px;
+
+ line-height: 30px;
+
+ font-weight: normal;
+
+ font-family: georgia, serif;
+
+}
+
+.zone-border-medium {
+
+ border-color: #0061A6;
+
+ border-top-width: 1px;
+
+ 
+
+}
+
+
+
+.tabs {
+
+ position: relative; 
+
+ min-height: 110em; /* This part sucks */
+
+ clear: both;
+
+ margin: 1em 0;
+
+
+
+}
+
+.tab {
+
+ float: left;
+
+}
+
+.tab label {
+
+ background: #eee; 
+
+ padding: 10px; 
+
+ border: 1px solid #ccc; 
+
+ margin-left: -1px; 
+
+ position: relative;
+
+ left: 1px; 
+
+}
+
+.tab [type=radio] {
+
+ display: none; 
+
+}
+
+.content {
+
+ position: absolute;
+
+ top: 28px;
+
+ left: 0;
+
+ background: white;
+
+ right: 0;
+
+ bottom: 0;
+
+ padding: 0px;
+
+padding-right: 8px;
+ border: 1px solid #ccc; 
+
+}
+
+[type=radio]:checked ~ label {
+
+ background: white;
+
+ border-bottom: 1px solid white;
+
+ z-index: 2;
+
+}
+
+[type=radio]:checked ~ label ~ .content {
+
+ z-index: 1;
+
+}
+
+.ui-widget-header {
+	background: white;
+}
