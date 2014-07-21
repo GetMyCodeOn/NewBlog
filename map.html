@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<style>
+
+
+
+
+path {
+  stroke: black;
+  stroke-width: 0.5px;
+  
+}
+
+
+svg {
+ float: right;
+
+}
+
+/*id:hover
+{
+background-color:green;
+}*/
+
+/*.subunit:hover
+{ 
+fill: yellow;
+ }*/
+
+
+.subunit-boundary {
+ fill: none;
+ stroke: black;
+/*  stroke-dasharray: 2,2;*/
+ stroke-linejoin: round;
+}
+
+#tooltip {
+        position: fixed;
+        width: 200px;
+        height: auto;
+        padding: 10px;
+        background-color: white;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        border-radius: 10px;
+        -webkit-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+        -moz-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+        box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+        pointer-events: none;
+      }
+      
+      #tooltip.hidden {
+        display: none;
+      }
+      
+      #tooltip p {
+        margin: 0;
+        font-size: 16px;
+        line-height: 20px;
+      }
+
+</style>
+<body>
+  <div id="tooltip" class="hidden"> 
+    </div>
+
+
+
+
+
+<h1>Team #GetMyCodeOn</h1>
+<h2>Cocaine Prices Around the World</h2>
+
+
+  <a href = "#retail"><button id="retail">Cocaine Retail Prices</button></a>
+
+  <a href = "#wholesale"><button id="wholesale">Cocaine Wholesale Prices</button></a>
+
+
+
+
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script src="http://d3js.org/topojson.v1.min.js"></script>
+<script>
+var width = 960,
+   height = 480;
+
+
+  
+var projection = d3.geo.equirectangular()
+   //.center([0, 55.4])
+   //.rotate([4.4, 0])
+   //.parallels([50, 60])
+   .scale(153)
+   .translate([width / 2, height / 2])
+   .precision(.1);
+
+var path = d3.geo.path()
+   .projection(projection);
+
+var svg = d3.select("body").append("svg")
+   .attr("width", width)
+   .attr("height", height);
+
+d3.json("cprice.json", function(data) {
+
+
+var colorScale = d3.scale.linear()
+    .domain([0, 50,300, 1200])
+    .range(["#d7b5d8", "#df65b0", '#ce1256', '#980043']);        
+
+          
+
+
+        var prices = {};
+  for(i=0; i<data.length; i++){
+      var datum = data[i];
+      var alpha = datum["Alpha-2"],
+          retail_price = datum["Retail price"],
+          wholesale_price = datum["Wholesale price"];
+
+
+
+    prices[alpha] = [retail_price, wholesale_price];
+      
+  }
+// console.log(prices);
+
+    
+
+d3.json("world.json", function(error, world) {
+ svg.selectAll(".subunit")
+   .data(topojson.feature(world, world.objects.subunits).features)
+ .enter().append("path")
+   .attr("class", function(d){ return "subunit "+ d.id; })
+   .attr("d", path)
+   .attr("fill", function(d) { 
+     if (window.location.href === "http://jackpitcher22.github.io/jack/#retail") { 
+       return (prices[d.id] && prices[d.id][0]) ? colorScale(prices[d.id][0]) : "#f1eef6"}
+     else      {return (prices[d.id] && prices[d.id][0]) ? colorScale(prices[d.id][1]) : "#f1eef6"};
+      
+      
+      
+    
+                                        
+   }) //conditoinal ternary operatory
+
+ 
+    .attr("d", path)
+    .on("mouseover", function(d) {
+       
+      
+
+        if (window.location.href === "http://jackpitcher22.github.io/jack/#retail")   { if (prices[d.id][0] === null) {"Sorry, no data available for this region"};
+
+            d3.select("#tooltip").classed("hidden", false)//overiding the css styling to hide it 
+              .html( '<h4>' + d.properties.name+'</h4>'+'$'+ prices[d.id][0] + '/g'); //.html - d3 method - takes the selection and inserts 
+                             
+                           }
+      
+      
+         else {   if (prices[d.id][1] === null) {"Sorry, no data available for this region"};     d3.select("#tooltip").classed("hidden", false)//overiding the css styling to hide it 
+              .html( '<h4>' + d.properties.name+'</h4>'+'$'+ prices[d.id][1] + '/Kg'); //.html - d3 method - takes the selection and inserts }
+                            }
+     
+    })
+                            
+           .on("mouseout", function()  {
+           
+            //Hide the tooltip
+            d3.select("#tooltip").classed("hidden", true);
+            
+           })  ;
+
+
+
+svg.append("path")
+     .datum(topojson.mesh(world, world.objects.subunits, function(a, b) { return a !== b; }))
+     .attr("d", path)
+     .attr("class", "subunit-boundary")    
+     .style("color","grey")     
+
+
+});
+});
+
+
+
+</script>
+
+</body>
+</html>
