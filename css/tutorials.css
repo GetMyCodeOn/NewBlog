@@ -1,27 +1,27 @@
 body {
 	margin-top: 150 px;
   background-color: black;
-  z-index: 1;
+  
 }
 
 #screen-fit {
   margin-bottom: 100 px;
-  z-index: 0;
+
 }
 
 .navbar {
   margin-bottom: 100 px;
-  z-index: -1;
+  
 }
 
 
 
 .navbar-inverse  {
   margin-bottom: 100 px;
-  z-index: -1;
+  
 } 
 
 .navbar-static-top {
   margin-bottom: 100 px;
-  z-index: -1;
+ 
 }
