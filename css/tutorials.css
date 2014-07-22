@@ -5,18 +5,22 @@ body {
 
 #screen-fit {
   margin-bottom: 100 px;
+  z-index: -1;
 }
 
 .navbar {
   margin-bottom: 100 px;
+  z-index: -1;
 }
 
 
 
 .navbar-inverse  {
   margin-bottom: 100 px;
+  z-index: -1;
 } 
 
 .navbar-static-top {
   margin-bottom: 100 px;
+  z-index: -1;
 }
