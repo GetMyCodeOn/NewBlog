@@ -204,7 +204,7 @@ p.subline{
 	background-position:bottom right;
 }
 .full-view-exit{
-	background:#222 url(../images/cross.png) no-repeat 10px 50%;
+	background:#222 url(/img/cross.png) no-repeat 10px 50%;
 	position:absolute;
 	top:5px;
 	right:0px;
