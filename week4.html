@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+<center>
+<h2>Latest from twitter</h2>
+<div id='tweets'></div>
+<img>
+</center>
+
+<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+<script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+<script>
+$.ajax({
+url: "http://getmycodeyoutwit.herokuapp.com",
+dataType: "json",
+success: function(data) {
+$.each(data.statuses, function () {
+console.log(data.statuses);
+$( "‪#‎tweets‬" )
+.append($('<img>', {
+src: this['img'],
+style: "padding-top:10px"
+}));
+});
+}
+});
+</script>
+</body>
+</html>
