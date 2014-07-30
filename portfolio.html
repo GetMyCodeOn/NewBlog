@@ -1,26 +1,113 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<title>Portfolio</title>
+		<meta name="description" content="Blueprint: Responsive Content Slider" />
+		<meta name="keywords" content="responsive, content, slider, jquery, css3, fluid, template" />
+		<meta name="author" content="Codrops" />
+		<link rel="shortcut icon" href="../favicon.ico">
+		<link rel="stylesheet" type="text/css" href="css/slide.css" />
+		<link rel="stylesheet" type="text/css" href="css/slider.css" />
+		<link rel="stylesheet" type="text/css" href="css/slides.css" />
+<script src="js/modernizr.custom.js"></script>
+	</head>
+	<body>
+		<div class="container">
+			<header class="clearfix">
+			
+				<h1>Portfolio</h1>
+				
+			</header>	
+      {% include header.html %}
+			<div class="main">
+				<div id="cbp-contentslider" class="cbp-contentslider">
+					<ul>
+						<li id="slide1" >
+							<h3>Week 1</h3>
+							<div>
+								<div >
+									<h2>Create a website!</h2>
+							<p>Over the weeks we have been working on this website, look through to see the many faces. Using jekyll, bootstrap,html, css, javascript and j query.  </p>
+								</div>
+							</div>
+						</li>
+						<li id="slide2">
+							<h3>Week 2  </h3>
+							<div>
+								<div >
+									<h2>The API news challenge!</h2>
+									<p>Tasked with creating live, updating feed on the client side using an API call.</p>
+									<p style "color:black"><a class= "hey" href="http://getmycodeon.com/week2.html">Check it out here!</a></p>
 
-
-
-<div class="container" id="container">
-
-			<div class="item block" data-bgimage="/img/1.jpg">
-				<div class="thumbs-wrapper">
-					<div class="thumbs">
-
-					</div>
+								</div>
+							</div>
+						</li>
+						<li id="slide3">
+							<h3>Week 3 & 4</h3>
+							<div>
+								<div>
+									<h2>Node schooling</h2>
+									<p>Week 3, we learnt all about node.js. Want to have a go your self? Check out the tutorials <a class = "hey" href "http://tutorials.dacamden.co.uk/learnyounode/tutorials/2014/07/09/Hello-World/"=>here!</a>
+									Week 4 we were tasked with using our node knowledge to create a social media stream working with both the front and backend. Only one team was able to get an end product.. check out their valient effort <a class= "hey" href = "http://bteamfc.co.uk/pages/project_2/">here!</a></p>
+								</div>
+							</div>
+						</li>
+						<li id="slide4">
+							<h3 >Week 5</h3>
+							<div>
+								<div>
+									<h2>Cocaine Life </h2>
+									<p>We had (name) from kilin.it come in to give us a breif this week. Task: create a map to represent the retail value and wholesale value of cocaine around the world</p>
+									<p>Look at where to go for the best deals <a class= "hey" href = "http://getmycodeon.com/map.html">here.</a></p>
+								</div>
+							</div>
+						</li>
+						<li id="slide5">
+							<h3 >Week 6</h3>
+							<div>
+								<div>
+									<h2>Project time </h2>
+									<p>The end is near!</p>
+								</div>
+							</div>
+						</li>
+					</ul>
+					<nav>
+						<a href="#slide1" ><span>Week 1</span></a>
+						<a href="#slide2" ><span>Week 2</span></a>
+						<a href="#slide3" ><span>Week 3 & 4</span></a>
+						<a href="#slide4" ><span>Week 5</span></a>
+						<a href="#slide5" ><span>Week 6 & 7</span></a>
+					</nav>
 				</div>
-				<h2 class="title">Check out our Week Two Challenge!</h2>
-				<p class="subline">Guardian API <span class="fancy"></span> </p>
-				<div class="intro">
-					<p>We created a web app which pulled the lastest news from the Guardian using its API.<a href="/week2.html">View </a></p>
-				</div>
-				<h2 class="title">Check out our Week Five Challenge!</h2>
-				<p class="subline">Dynamic Data <span class="fancy"></span> </p>
-				<div class="intro">
-					<p>We created a map of the world that displayed the retail price of Cocaine!<a href="/map.html">View </a></p>
-				</div>
-
 			</div>
+		</div>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script src="js/jquery.cbpContentSlider.min.js"></script>
+		<script>
+			$(function() {
+				/*
+				- how to call the plugin:
+				$( selector ).cbpContentSlider( [options] );
+				- options:
+				{
+					// default transition speed (ms)
+					speed : 500,
+					// default transition easing
+					easing : 'ease-in-out',
+					// current item's index
+					current : 0
+				}
+				- destroy:
+				$( selector ).cbpContentSlider( 'destroy' );
+				*/
+
+				$( '#cbp-contentslider' ).cbpContentSlider();
+			});
+		</script>
+	</body>
+</html>
+
