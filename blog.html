@@ -241,28 +241,30 @@ Day Ten: Minor Tweaks
 									<div class="cbp-ntcontent">
 										<p>Day 11 - Changing approach
 					<p>
-				On Day Eleven we started a new project based around node.js and WOW was it difficult! I am sure, however, that as with the other mountainous tasks we have scaled so far we will surely reach the summit before Friday. 
-					</p>
+				Changing approach: Monday started as usual with a presentation on the week’s program by Dan, followed by a briefing on this week’s challenge. At first glance it seemed very similar to the previous week’s challenge, but once we divided the topic up into research areas and reported back to the group the scope and level of difficulty became apparent. As a group we broke down the task, as much as we could, and decided to spend the day studying node.js. Later in the day, we decided as a class to spend the first part of the week, working our way through Nodeschool. 
+
+</p>
 Day 12 - Tough going
 				<p>
-			Nodeschool.js was by far the hardest week so far. Attempting to learn node without a working knowledge of JavaScript was the biggest challenge and we decided as a class to postpone Week Three’s project and buckle down to learn node. 
+			I feel that the level of difficulty in the nodeschool exercises jumps very steeply after the first couple of exercises. I wish I had a stronger foundation in javascript. Working with different people across the groups helps, but today is tough going 
 
 				</p>
 Day 13 - Learnyounode</a></h4>
 
 				<p>
-			As a class we tackled node school together, using a random selector to choose individuals to present to the class on specific topics. In this way we moved away from the group based approach of the initial two weeks and towards a more traditional classroom learning structure. 
+	Now we follow a more scheduled traditional approach, to finish the learnyounode/nodeschool exercises. Dan has set times for completion of each exercise and once the time is up, someone will be picked at random to present, followed by Q&A by the rest of the class. I miss the dynamism of working on a project and spend a lot of time finding additional resources that will conceptually explain what the learnyounode exercises require. I have a breakthrough at the end of the day, when a good part of the node exercises make a lot more sense. Talking other people through every line of code, as other groups have done, proved very helpful to consolidate and clarify the learning. 
+
   
 				</p>
 Day 14 - The damned sixes
 				
 				<p>
-				Having moved through the nodeschool challenges there was a noticeable difference within the class of ability to understand the tasks. On Day Fourteen we differed our approach slightly to make sure that everyone was moving at the same speed. This saw class-members who were more proficient with nodeschool take a step back from their own learning to assist the members of the group who were slightly behind. By the end of the day as a class we had all finished the nodeschool exercises and had managed to achieve a good understanding of what it would take to complete Week Three’s project.
+				 I spent almost the entire day on exercise 6, Dan has helpfully given us tips on how to approach it, but I still have not solved it. Once we work through, it all makes sense, but miss having a book to refer to with questions and methods. 
 
 				</p>
 Day 15 - Nodeschool out
 				<p>
-			Having finished nodeschool we spent Day Fifteen dividing the tasks required for the completion of the project. We managed to extract some data from the Twitter API and although we could not access the specific information needed – i.e. the posted image urls – it was a great success to be able to write some working back-end code. 
+			We finish the last of the learnyounode exercises and return to planning the Twitter API project. I spend the afternoon looking for a solution to hosting and avoiding sharing our API keys on public repositories. Hosting on Heroku and hiding the keys using config variables looks like the way forward. It’s been a long week, but I feel confident that with some added work and reading over the weekend it will have been productive.  
   
 				</p></p>
 									</div>
@@ -402,6 +404,28 @@ The task for this week was to create a social media feed using javascript on the
 </p>
 									</div>
 								</li>
+<li>
+									<h4 class="cbp-nttrigger">Aske</h4>
+									<div class="cbp-ntcontent">
+										<p>Day 16: Monday
+Twitter API: This week was the culmination and test of the Node.js work we did all of last week. The goal: building a web application using Node.js, that pulls content from twitter, make it filter out all data aside from images, host the application online, make it respond to requests and send the relevant data back to the requester. On the front-end side we had to make the request and display the returned images on our website. Breaking down the task into smaller chunks took us a lot of time and kept changing throughout the week as we understood more of the task. 
+</p>
+
+<p>Day 17: Tuesday
+ Backend: All of us focused on the task of building the backend side of the task, by getting the relevant keys from Twitter and picking a npm package that would help us achieve our objective of pulling data from twitter. As a class we compared the various packages and ranked them, ending up choosing Twit as the most relevant package for our project. 
+</p>
+
+<p>Day 18: Wednesday
+To stream or not to stream? We got the Twit module working, using the stock stream function from the Twit documentation. This way of pulling content, does cause some complication as we only pull the images posted from the moment we run the application onwards - leaving out the images from the past seven days that Twitter store.</p>
+
+<p>Day 19: Thursday
+Hosting Issues: We spent a lot of time trying to host the node.js application on Heroku, without solving it. </p>
+
+<p>Day 20: Friday
+#Sadness: We pushed hard to get the project completely done, but sadly we did not finish it in time for the final presentation. The modules worked, almost, but we did not accomplish the integration and hosting of the node application that were necessary to finish the project. 
+</p>
+									</div>
+								</li>
 							</ul>
 						</div>
 					</li>
@@ -462,6 +486,24 @@ We made good progress on the map and managed to integrate the map data with the 
 	Unfortunately I was not able to attend this day as I was graduating from university. I was, however, in touch with the team and keep abreast of the days activities. By the end of the day the team had managed to streamline the map.</p>
 <p>Day 25
 	On Day Twenty-Five we presented our final map to Robin, who had come back to review the classes work. He seemed happy with the quality of our work and the progress we had made within a week.</p></p>
+									</div>
+								</li>
+<li>
+									<h4 class="cbp-nttrigger">Aske</h4>
+									<div class="cbp-ntcontent">
+										<p><p>Day 21: Monday
+Kiln.it Challenge: Robin Hughston of Kiln.it came by and gave us a presentation on d3.js before setting us the week’s challenge. The challenge is to build a world map from geo data and link the retail and wholesale cocaine prices from around the world to that map, using d3.js.  </p>
+<p>Day 22: Tuesday
+D3.js: We found some useful tutorials on D3 and spent the day working on those after reading through the documentation on the D3 page. Then we worked through Mike Bostocks “Let’s Make a Map” tutorial, using the world data supplied by Robin instead of just the GB data in the example. </p>
+
+<p>Day 23: Wednesday
+Mercator or Peters?: We got the map looking nice yesterday and picked a projection we feel will suit what we are trying to achieve. Jack and Liv made a lot of progress on making the map interactive, so that countries get highlighted when you hover the mouse over them. I worked on getting the data to display as shades of a particular colour, so that higher prices would be dark red and low prices would be light reds. Then I added bands, so that price ranges would be captured as well. 
+</p>
+
+<p>Day 24: Thursday
+Binding price data to geodata: The big remaining tasks are: how to bind the relevant price info to a country and have that appear when you hover over the country, and how to swap between the retail and whole-sale prices for cocaine. </p>
+<p>Day 25: Friday
+Say Hello to My Little Friend: Robin is coming at four to see our presentations so the pressure is on. Nafisa solved the price display on hover problem, but we still need to find a way to swap between retail and wholesale prices. I worked on one way of doing so using Jquery’s toogle function, which is a stable and easy, but not very elegant or fast way of doing it. This was meant to be a backup so we would have a finished product for the presentation. Later in the day we find a way to do it using dot notation and looking at the browser path, that is both more elegant and fast, but we don’t finish it in time for the presentation. We have a product as finished as all the others and the presentation go well.</p></p>
 									</div>
 								</li>
 							</ul>
