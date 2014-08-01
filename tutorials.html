@@ -70,22 +70,22 @@
 				<section class="grid-wrap">
 					<ul class="grid">
 						<li class="grid-sizer"></li><!-- for Masonry column width -->
-						<li>
+					<li>
 							<figure>
 								
-								<figcaption><h3>Letterpress asymmetrical</h3><p>Chillwave hoodie ea gentrify aute sriracha consequat.</p></figcaption>
+								<figcaption><h3>Running through functions</h3><p>3 different ways to write functions in javascript</p></figcaption>
 							</figure>
 						</li>
 						<li>
 							<figure>
 							
-								<figcaption><h3>Vice velit chia</h3><p>Laborum tattooed iPhone, Schlitz irure nulla Tonx retro 90's chia cardigan quis asymmetrical paleo. </p></figcaption>
+								<figcaption><h3>Arrays</h3><p>3 ways to add elements to an array</p></figcaption>
 							</figure>
 						</li>
 						<li>
 							<figure>
 								
-								<figcaption><h3>Brunch semiotics</h3><p>Ex disrupt cray yr, butcher pour-over magna umami kitsch before they sold out commodo.</p></figcaption>
+								<figcaption><h3>Command line hacks</h3><p>Writing into a file from the command line</p></figcaption>
 							</figure>
 						</li>
 						<li>
@@ -221,8 +221,35 @@
 						<li>
 							<figure>
 								<figcaption>
-									<h3>Letterpress asymmetrical</h3>
-									<p>Kale chips lomo biodiesel stumptown Godard Tumblr, mustache sriracha tattooed cray aute slow-carb placeat delectus. Letterpress asymmetrical fanny pack art party est pour-over skateboard anim quis, ullamco craft beer.Kale chips lomo biodiesel stumptown Godard Tumblr, mustache sriracha tattooed cray aute slow-carb placeat delectus. Letterpress asymmetrical fanny pack art party est pour-over skateboard anim quis, ullamco craft beer.Kale chips lomo biodiesel stumptown Godard Tumblr, mustache sriracha tattooed cray aute slow-carb placeat delectus. Letterpress asymmetrical fanny pack art party est pour-over skateboard anim quis, ullamco craft beer.Kale chips lomo biodiesel stumptown Godard Tumblr, mustache sriracha tattooed cray aute slow-carb placeat delectus. Letterpress asymmetrical fanny pack art party est pour-over skateboard anim quis, ullamco craft beer.Kale chips lomo biodiesel stumptown Godard Tumblr, mustache sriracha tattooed cray aute slow-carb placeat delectus. Letterpress asymmetrical fanny pack art party est pour-over skateboard anim quis, ullamco craft beer.Kale chips lomo biodiesel stumptown Godard Tumblr, mustache sriracha tattooed cray aute slow-carb placeat delectus. Letterpress asymmetrical fanny pack art party est pour-over skateboard anim quis, ullamco craft beer.</p>
+									<h3>Running through functions</h3>
+									<p>
+
+<p>(1) Naming a function and assigning it to a variable.</p>
+
+var named = function apple (){ console.log("hello") };
+lets call the function--> named() 
+this is what it prints out-->hello 
+
+<p>(2) BUT we don’t always need to name the function as the variable assignment has labelled it – named.</p>
+
+var named = function (){ console.log("hello") };
+named()
+hello 
+
+
+<p>(3) Here we don’t even have to assign a variable, we can just name the function and then call it.</p> 
+
+function apple (){ console.log("hello") };
+apple()
+hello 
+
+<p>(4) Finally, we don’t have to even name the function as seen here. We also don’t have to explicitly call it, the () at the end allows to call it. This is also known as an immediate function.</p> 
+
+(function(){ console.log("hello") })();
+hello 
+
+
+</p>
 								</figcaption>
 								
 							</figure>
@@ -230,8 +257,27 @@
 						<li>
 							<figure>
 								<figcaption>
-									<h3>Vice velit chia</h3>
-									<p>Chillwave Echo Park Etsy organic Cosby sweater seitan authentic pour-over. Occupy wolf selvage bespoke tattooed, cred sustainable Odd Future hashtag butcher.</p>
+									<h3>Arrays</h3>
+									<p>
+<p>(i) For when you know the length of an array</p>
+<p>create an array-->someArray = [0,1,2];</p>
+<p>add a new element-->someArray[3] = '10';</p>
+<p>call the array-->someArray</p>
+
+<p>we've added an element-->[0,1,2, "10"]</p>
+
+<p>(ii) For when you don’t know the length</p>
+<p>someArray [someArray.length]="a";</p>
+<p>someArray [0,1,2,10,a]</p>
+
+<p>(iii)Most efficient way, weather you know the 
+the length or not, essentially .push does 	
+both .length and adds an element in one step.
+It will also give you the value of your new array</p>
+<p>someArray.push('d');</p>
+6 //new length of array
+<p>someArray [0,1,2,10,a,d]</p>
+</p>
 								</figcaption>
 								
 							</figure>
@@ -239,8 +285,15 @@
 						<li>
 							<figure>
 								<figcaption>
-									<h3>Brunch semiotics</h3>
-									<p>IPhone PBR polaroid before they sold out meh you probably haven't heard of them leggings tattooed tote bag, butcher paleo next level single-origin coffee photo booth.</p>
+									<h3>Command line hacks</h3>
+									<p>
+
+This will write in hello into the given file and replace all other text in the file
+<p>echo helo > filename</p>
+
+The double arrows will simply add to the existing file without overwriting what is in it 
+<p>echo hello >>file name</p>
+</p>
 								</figcaption>
 								
 							</figure>
